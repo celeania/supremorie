@@ -44,7 +44,7 @@ function buildSphere(params) {
         var newY = 360/(hSegments)*hIndex;
          
         //Faces Background Color
-        var color = i%2==0?"#151515":"#7CFC00"
+        var color = i%2==0?"#151515":"#666666"
          
         //Face Styling
         var face = faces.item(i)
