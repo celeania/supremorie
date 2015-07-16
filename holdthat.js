@@ -6,7 +6,7 @@ function buildSphere(params) {
     var vSegments = params.vSegments||16;
     var hSegments = params.hSegments||32;
     var radius = params.radius || 200;
-    var duration = params.duration || 5000;
+    var duration = params.duration || 4000;
     var backfaceVisibility = params.backfaceVisibility || "visible";
     var delay = params.delay || 10;
     var faceWidth = params.faceWidth || 20;
@@ -44,7 +44,7 @@ function buildSphere(params) {
         var newY = 360/(hSegments)*hIndex;
          
         //Faces Background Color
-        var color = i%2==0?"#b00404":"#d13535"
+        var color = i%2==0?"#151515":"#7CFC00"
          
         //Face Styling
         var face = faces.item(i)
