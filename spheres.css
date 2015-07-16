@@ -51,9 +51,3 @@
     top:50%;
      
 }
-
-.active {
-     -webkit-transform:rotateX(45deg) rotateY(5deg) rotateZ(0deg) scale3d(0, 0, 0) translate3d(0px, 0px, 0px);
-      -moz-transform:rotateX(45deg) rotateY(5deg) rotateZ(0deg) scale3d(0, 0, 0) translate3d(0px, 0px, 0px);
-      background: green;
-}
