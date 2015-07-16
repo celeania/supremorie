@@ -1,19 +1,18 @@
 function buildSphere(params) {
-     
-    //Default Options
+
     //params - is an object which is creating depending on the FORM fields' values
     if (!params) var params = {};
-    var vSegments = params.vSegments||16;
-    var hSegments = params.hSegments||32;
+    var vSegments = params.vSegments||12;
+    var hSegments = params.hSegments||20;
     var radius = params.radius || 100;
     var duration = params.duration || 3000;
     var backfaceVisibility = params.backfaceVisibility || "visible";
-    var delay = params.delay || 10;
-    var faceWidth = params.faceWidth || 20;
-    var faceHeight = params.faceHeight || 20;
+    var delay = params.delay || 20;
+    var faceWidth = params.faceWidth || 15;
+    var faceHeight = params.faceHeight || 15;
     var faceText = params.faceText || "";
     var faceOpacity = params.faceOpacity || 1;
-    var faceBorderRadius = params.faceBorderRadius || 15;
+    var faceBorderRadius = params.faceBorderRadius || 0;
      
     // Get our #container3d
     var container = document.getElementById("container3d");
@@ -44,7 +43,7 @@ function buildSphere(params) {
         var newY = 360/(hSegments)*hIndex;
          
         //Faces Background Color
-        var color = i%2==0?"#151515":"#666666"
+        var color = i%2==0?"#b00404":"#d13535"
          
         //Face Styling
         var face = faces.item(i)
@@ -59,7 +58,7 @@ function buildSphere(params) {
         /* End of styling */
          
         /* For Webkit */
-        if ("webkitTransform" in faceStyle) {
+        if ("webkitTransform" in testFace.style) {
             faceStyle.webkitBackfaceVisibility = backfaceVisibility
             /* Set new transition duration, delay and faces transform to start animation: */
             faceStyle.webkitTransitionDuration = duration/1000+"s";
@@ -69,7 +68,7 @@ function buildSphere(params) {
         }
          
         /* For Firefox */
-        if ("MozTransform" in faceStyle) {
+        if ("MozTransform" in testFace.style) {
             faceStyle.MozBackfaceVisibility = backfaceVisibility
             faceStyle.MozTransitionDuration = duration/1000+"s"
             faceStyle.MozTransitionDelay = i*delay/1000+"s"
@@ -79,7 +78,7 @@ function buildSphere(params) {
     Some kind of hack for FF, it will not animate faces right after their creation, 
     FF requires some kind of "ready" state for it, so let make this loop again after 0 timeout:
     */
-    if ("MozTransform" in faceStyle) {
+    if ("MozTransform" in testFace.style) {
         setTimeout(function(){
             for (var i=0; i<=faces.length-1; i++) {
                  
