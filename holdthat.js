@@ -5,15 +5,15 @@ function buildSphere(params) {
     if (!params) var params = {};
     var vSegments = params.vSegments||16;
     var hSegments = params.hSegments||32;
-    var radius = params.radius || 200;
-    var duration = params.duration || 4000;
+    var radius = params.radius || 100;
+    var duration = params.duration || 3000;
     var backfaceVisibility = params.backfaceVisibility || "visible";
     var delay = params.delay || 10;
     var faceWidth = params.faceWidth || 20;
     var faceHeight = params.faceHeight || 20;
     var faceText = params.faceText || "";
     var faceOpacity = params.faceOpacity || 1;
-    var faceBorderRadius = params.faceBorderRadius || 0;
+    var faceBorderRadius = params.faceBorderRadius || 15px;
      
     // Get our #container3d
     var container = document.getElementById("container3d");
