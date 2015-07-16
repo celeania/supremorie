@@ -13,7 +13,7 @@ function buildSphere(params) {
     var faceHeight = params.faceHeight || 20;
     var faceText = params.faceText || "";
     var faceOpacity = params.faceOpacity || 1;
-    var faceBorderRadius = params.faceBorderRadius || 15px;
+    var faceBorderRadius = params.faceBorderRadius || 15;
      
     // Get our #container3d
     var container = document.getElementById("container3d");
