@@ -1,3 +1,8 @@
     $(document).ready(function(){
-       $('.imgslider').slick();
+       $('.imgslider').slick(
+           {
+               dots: true,
+               speed: 500,
+           }
+           )
     });
